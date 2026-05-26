@@ -1,5 +1,5 @@
 const rawBaseUrl = (import.meta.env.VITE_API_BASE_URL || '').trim();
-const normalizedBaseUrl = rawBaseUrl.replace(/\\/$/, '');
+const normalizedBaseUrl = rawBaseUrl.replace(/\/$/, '');
 const BASE = normalizedBaseUrl ? `${normalizedBaseUrl}/api` : '/api';
 
 async function request(path, params = {}) {
