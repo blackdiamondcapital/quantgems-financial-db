@@ -5,10 +5,15 @@
   "outputDirectory": "dist",
   "installCommand": "npm install",
   "framework": null,
+  "functions": {
+    "api/index.js": {
+      "maxDuration": 30
+    }
+  },
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/backend/server.js"
+      "destination": "/api"
     },
     {
       "source": "/((?!api/).*)",
